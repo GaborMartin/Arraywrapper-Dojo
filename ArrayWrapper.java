@@ -47,7 +47,7 @@ public class ArrayWrapper {
     //
     //  e.g. the result of deleting index 2 from [0, 1, 2, 3, 4] is [0, 1, 3, 4]
     public void delete(int index) {
-        int[] tempArray = new int[array.length + 1];
+        int[] tempArray = new int[array.length - 1];
         int tempVariable = 0;
         for (int i = 0; i < array.length; i++){
             if (i == index) {
@@ -56,7 +56,7 @@ public class ArrayWrapper {
             else {
                 tempArray[i - tempVariable] = array[i];
             }
-        array = tempArray;
         }
+        array = tempArray;
     }
 }
